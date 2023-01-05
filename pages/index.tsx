@@ -8,19 +8,17 @@ const inter = Inter({ subsets: ['latin'] })
 
 type testType = {
   name: string,
-  age: string
+  age: any
 };
 
 export default function Home() {
 
   const [test, setTest] = useState({} as testType);
   useEffect(()=>{
-    setTest([
-      {
-        name: 'Juyel',
-        age: 28
-      }
-    ]);
+    setTest({
+      name: 'Juyel',
+      age: 28
+    });
   },[])
   return (
     <>
